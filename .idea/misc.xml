@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FindBugsConfigurable">
+    <option name="make" value="true" />
+    <option name="effort" value="default" />
+    <option name="priority" value="Medium" />
+    <option name="excludeFilter" value="" />
+  </component>
+  <component name="JUnitGeneratorProjectSettings">
+    <option name="selectedTemplateKey" value="JUnit 4" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/self/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day04/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day05/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day06/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day07/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day08/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day09/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day10/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day11/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day12/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day13/pom.xml" />
+        <option value="$PROJECT_DIR$/small-spring/day14/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="PDMPlugin">
+    <option name="skipTestSources" value="false" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>

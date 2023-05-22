@@ -1,0 +1,38 @@
+package com.hb.springframework.beans.factory.support;
+
+import com.hb.springframework.core.io.DefaultResourceLoader;
+import com.hb.springframework.core.io.ResourceLoader;
+
+/**
+ * @ClassName AbstractBeanDefinitionReader
+ * @Description TODO
+ * @Author huangbo
+ * @Mail refusers@163.com
+ * @Date 2023/4/4 22:59
+ * @Version 1.0
+ */
+public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader{
+
+    private final BeanDefinitionRegistry registry;
+
+    private ResourceLoader resourceLoader;
+
+    protected AbstractBeanDefinitionReader(BeanDefinitionRegistry registry) {
+        this(registry, new DefaultResourceLoader());
+    }
+
+    public AbstractBeanDefinitionReader(BeanDefinitionRegistry registry, ResourceLoader resourceLoader) {
+        this.registry = registry;
+        this.resourceLoader = resourceLoader;
+    }
+
+    @Override
+    public BeanDefinitionRegistry getRegistry() {
+        return this.registry;
+    }
+
+    @Override
+    public ResourceLoader getResourceLoader() {
+        return this.resourceLoader;
+    }
+}
