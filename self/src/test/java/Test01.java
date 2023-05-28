@@ -10,14 +10,14 @@ import org.junit.Test;
  */
 public class Test01 {
 
-   @Test
-    public void test01(){
-       C a = new A();
-       a.test();
-   }
+    @Test
+    public void test01() {
+        C a = new A();
+        a.test();
+    }
 
     @Test
-    public void test02(){
+    public void test02() {
 
         System.out.println(A.class.isAssignableFrom(B.class));
         System.out.println(B.class.isAssignableFrom(A.class));
@@ -26,18 +26,18 @@ public class Test01 {
 }
 
 
-class A extends B implements C{
+class A extends B implements C {
 
 
 }
 
-class B{
+class B {
     public void test() {
         System.out.println("执行了！");
     }
 }
 
-interface C{
+interface C {
 
     void test();
 }

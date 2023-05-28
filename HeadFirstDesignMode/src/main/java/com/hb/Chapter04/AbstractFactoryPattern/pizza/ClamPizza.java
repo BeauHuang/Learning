@@ -10,7 +10,7 @@ import com.hb.Chapter04.AbstractFactoryPattern.ingredientfactory.PizzaIngredient
  * @Date 2023/4/22 15:37
  * @Version 1.0
  */
-public class ClamPizza extends Pizza{
+public class ClamPizza extends Pizza {
     PizzaIngredientFactory pizzaIngredientFactory;
 
     public ClamPizza(PizzaIngredientFactory pizzaIngredientFactory) {

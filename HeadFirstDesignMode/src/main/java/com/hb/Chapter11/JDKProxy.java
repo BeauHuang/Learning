@@ -18,8 +18,8 @@ public class JDKProxy {
         StudentProxy student1 = new StudentProxy(new Student("小明", 18));
         StudentProxy student2 = new StudentProxy(new Student("小红", 17));
 
-        Person person1 = (Person) Proxy.newProxyInstance(student1.getClass().getClassLoader(), new Class[]{Person.class}, student1);
-        Person person2 = (Person) Proxy.newProxyInstance(student2.getClass().getClassLoader(), new Class[]{Person.class}, student2);
+        Person person1 = (Person) Proxy.newProxyInstance(student1.getClass().getClassLoader(), new Class[] {Person.class}, student1);
+        Person person2 = (Person) Proxy.newProxyInstance(student2.getClass().getClassLoader(), new Class[] {Person.class}, student2);
         person1.getName();
         person1.getAge();
         person2.getName();

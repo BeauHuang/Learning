@@ -19,11 +19,11 @@ public class HashCode {
 
         Person p1 = new Person(20, "李明", "男", "18260038858");
 
-        map.put(p1,"大吉大利，今晚吃鸡！");
+        map.put(p1, "大吉大利，今晚吃鸡！");
 
         Person p2 = new Person(20, "李明", "男", "18260038858");
 
-        System.out.println(p1.hashCode()+"==="+p2.hashCode());
+        System.out.println(p1.hashCode() + "===" + p2.hashCode());
 
         System.out.println(map.get(p2));
 

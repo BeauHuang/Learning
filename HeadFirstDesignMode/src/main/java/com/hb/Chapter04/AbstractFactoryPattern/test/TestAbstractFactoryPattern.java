@@ -20,7 +20,7 @@ import com.hb.Chapter04.AbstractFactoryPattern.pizzastore.PizzaStore;
 public class TestAbstractFactoryPattern {
 
     @Test
-    public void test01(){
+    public void test01() {
         PizzaStore nyPizzaStore = new NYPizzaStore();
         PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
         PizzaStore californiaPizzaStore = new CaliforniaPizzaStore();

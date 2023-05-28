@@ -15,7 +15,7 @@ import com.hb.springframework.beans.factory.HierarchicalBeanFactory;
  * 配置Bean的接口
  * 目前配置选项有俩，单例和多例，默认单例
  */
-public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, SingletonBeanRegistry{
+public interface ConfigurableBeanFactory extends HierarchicalBeanFactory, SingletonBeanRegistry {
 
     String SCOPE_SINGLETON = "singleton";
 

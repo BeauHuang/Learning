@@ -3,7 +3,6 @@ package com.hb.Chapter04.AbstractFactoryPattern.ingredientfactory;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Cheeese.Cheese;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Cheeese.MozzarellaCheese;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Clams.Clams;
-import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Clams.FreshClams;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Clams.FrozenClams;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Dough.Dough;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Dough.ThickCrustDough;
@@ -12,7 +11,6 @@ import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Pepperoni.XPepperoni;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Sauce.PlumTomatoSauce;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Sauce.Sauce;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Veggies.Potato;
-import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Veggies.Tomato;
 import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Veggies.Veggies;
 
 /**
@@ -23,7 +21,7 @@ import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Veggies.Veggies;
  * @Date 2023/4/21 23:49
  * @Version 1.0
  */
-public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory{
+public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Dough createDaugh() {
         return new ThickCrustDough();

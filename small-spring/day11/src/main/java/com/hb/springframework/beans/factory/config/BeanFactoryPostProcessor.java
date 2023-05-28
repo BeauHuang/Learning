@@ -15,14 +15,14 @@ import com.hb.springframework.beans.factory.ConfigurableListableBeanFactory;
 /**
  * Allows for custom modification of an application context's bean definitions,
  * adapting the bean property values of the context's underlying bean factory.
- *
+ * <p>
  * 允许自定义修改 BeanDefinition 属性信息
- *
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public interface BeanFactoryPostProcessor {

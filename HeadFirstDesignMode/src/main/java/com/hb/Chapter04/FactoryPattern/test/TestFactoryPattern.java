@@ -18,7 +18,7 @@ import com.hb.Chapter04.FactoryPattern.product.Pizza;
 public class TestFactoryPattern {
 
     @Test
-    public void test01(){
+    public void test01() {
         PizzaStore nyPizzaStore = new NYPizzaStore();
         PizzaStore chicagoPizzaStore = new ChicagoPizzaStore();
 

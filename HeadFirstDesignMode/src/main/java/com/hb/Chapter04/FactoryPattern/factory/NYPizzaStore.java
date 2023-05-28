@@ -12,7 +12,7 @@ import com.hb.Chapter04.FactoryPattern.product.newyork.NYStyleClamPizza;
  * @Date 2023/4/20 0:24
  * @Version 1.0
  */
-public class NYPizzaStore extends PizzaStore{
+public class NYPizzaStore extends PizzaStore {
     @Override
     protected Pizza createPizza(String type) {
         if (type.equals("cheese")) {

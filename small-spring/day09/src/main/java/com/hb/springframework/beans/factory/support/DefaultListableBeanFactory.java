@@ -24,6 +24,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 
     /**
      * 通过bean的name获取BeanDefinition
+     *
      * @param beanName
      * @return
      * @throws BeansException
@@ -39,6 +40,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 
     /**
      * 判断容器中是否包含BeanDefinition
+     *
      * @param beanName
      * @return
      */
@@ -49,6 +51,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 
     /**
      * 返回BeanDefinition容器的keySet
+     *
      * @return
      */
     @Override
@@ -58,6 +61,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 
     /**
      * 注册BeanDefinition
+     *
      * @param name
      * @param def
      * @throws BeansException
@@ -70,9 +74,10 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
     /**
      * 在map中遍历，只要是type类型的子类或是实现类，都表示命中
      * 这时候可能找到多个
+     *
      * @param type
-     * @return
      * @param <T>
+     * @return
      * @throws BeansException
      */
     @Override
@@ -86,6 +91,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
         });
         return result;
     }
+
     @Override
     public void preInstantiateSingletons() throws BeansException {
         beanDefinitionMap.keySet().forEach(this::getBean);

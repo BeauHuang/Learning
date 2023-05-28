@@ -10,7 +10,7 @@ import com.hb.Chapter03.Decorator.coffee.Beverage;
  * @Date 2023/4/14 22:38
  * @Version 1.0
  */
-public class Mocha extends CondimentDecorator{
+public class Mocha extends CondimentDecorator {
 
     public Mocha(Beverage beverage) {
 
@@ -19,11 +19,11 @@ public class Mocha extends CondimentDecorator{
 
     @Override
     public String getDescription() {
-        return beverage.getDescription()+", Mocha";
+        return beverage.getDescription() + ", Mocha";
     }
 
     @Override
     public double cost() {
-        return beverage.cost()+0.2;
+        return beverage.cost() + 0.2;
     }
 }

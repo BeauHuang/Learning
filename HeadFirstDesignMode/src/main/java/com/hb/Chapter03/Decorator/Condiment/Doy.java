@@ -10,7 +10,7 @@ import com.hb.Chapter03.Decorator.coffee.Beverage;
  * @Date 2023/4/14 22:40
  * @Version 1.0
  */
-public class Doy extends CondimentDecorator{
+public class Doy extends CondimentDecorator {
     public Doy(Beverage beverage) {
 
         this.beverage = beverage;
@@ -18,11 +18,11 @@ public class Doy extends CondimentDecorator{
 
     @Override
     public String getDescription() {
-        return beverage.getDescription()+", Doy";
+        return beverage.getDescription() + ", Doy";
     }
 
     @Override
     public double cost() {
-        return beverage.cost()+0.3;
+        return beverage.cost() + 0.3;
     }
 }

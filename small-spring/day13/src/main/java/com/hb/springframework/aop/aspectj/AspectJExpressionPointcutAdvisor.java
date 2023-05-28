@@ -8,12 +8,12 @@ import com.hb.springframework.aop.framework.PointcutAdvisor;
 
 /**
  * Spring AOP Advisor that can be used for any AspectJ pointcut expression.
- *
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public class AspectJExpressionPointcutAdvisor implements PointcutAdvisor {
@@ -25,7 +25,7 @@ public class AspectJExpressionPointcutAdvisor implements PointcutAdvisor {
     // 表达式
     private String expression;
 
-    public void setExpression(String expression){
+    public void setExpression(String expression) {
         this.expression = expression;
     }
 
@@ -42,7 +42,7 @@ public class AspectJExpressionPointcutAdvisor implements PointcutAdvisor {
         return advice;
     }
 
-    public void setAdvice(Advice advice){
+    public void setAdvice(Advice advice) {
         this.advice = advice;
     }
 

@@ -36,19 +36,22 @@ class DeadLock implements Runnable {
                 System.out.println(currentThreadName + " get A");
                 try {
                     Thread.sleep(1000);
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 synchronized (B) {
                     System.out.println(currentThreadName + " get B");
                 }
             }
-        } else {
+        }
+        else {
             synchronized (B) {
                 System.out.println(currentThreadName + " get B");
                 try {
                     Thread.sleep(1000);
-                } catch (InterruptedException e) {
+                }
+                catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 synchronized (A) {
@@ -78,7 +81,8 @@ class Main {
             System.out.println(currentThreadName + " get " + first);
             try {
                 Thread.sleep(1000);
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e) {
                 e.printStackTrace();
             }
             synchronized (second) {
@@ -92,10 +96,10 @@ class Main {
 /**
  * 这种情况下是两个线程执行的是不同的资源，所以不影响锁的获取
  */
-class DaedLock2{
+class DaedLock2 {
 
-    static DaedLock2 lock1= new DaedLock2();
-    static DaedLock2 lock2= new DaedLock2();
+    static DaedLock2 lock1 = new DaedLock2();
+    static DaedLock2 lock2 = new DaedLock2();
 
     public static void main(String[] args) {
 

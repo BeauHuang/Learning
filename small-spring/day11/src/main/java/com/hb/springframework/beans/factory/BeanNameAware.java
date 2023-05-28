@@ -6,12 +6,12 @@ package com.hb.springframework.beans.factory;
  * that an object depend on its bean name, as this represents a potentially
  * brittle dependence on external configuration, as well as a possibly
  * unnecessary dependence on a Spring API.
- *
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public interface BeanNameAware extends Aware {

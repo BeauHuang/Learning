@@ -6,11 +6,11 @@ import java.lang.reflect.Method;
  * Advice invoked before a method is invoked. Such advices cannot
  * prevent the method call proceeding, unless they throw a Throwable.
  * <p>
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public interface MethodBeforeAdvice extends BeforeAdvice {

@@ -18,26 +18,26 @@ public abstract class Pizza {
     public String sause;
     public List<String> toppings = new ArrayList<>();
 
-    public void prepare(){
-        System.out.println("准备中。。。"+name);
+    public void prepare() {
+        System.out.println("准备中。。。" + name);
         for (String topping : toppings) {
             System.out.println("  " + topping);
         }
     }
 
-    public void bake(){
+    public void bake() {
         System.out.println("烘烤中。。。");
     }
 
-    public void cut(){
+    public void cut() {
         System.out.println("切片中。。。");
     }
 
-    public void box(){
+    public void box() {
         System.out.println("包装中。。。");
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 }

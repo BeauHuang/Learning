@@ -10,7 +10,7 @@ import com.hb.springframework.beans.BeansException;
  * @Date 2023/4/8 21:48
  * @Version 1.0
  */
-public interface ConfigurableApplicationContext extends ApplicationContext{
+public interface ConfigurableApplicationContext extends ApplicationContext {
     /**
      * 刷新容器
      *

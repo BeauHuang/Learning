@@ -7,11 +7,11 @@ package com.hb.springframework.aop;
  * <p>
  * 被代理的目标对象
  * <p>
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public class TargetSource {
@@ -27,20 +27,22 @@ public class TargetSource {
      * <p>Can return <code>null</code>, although certain usages of a
      * <code>TargetSource</code> might just work with a predetermined
      * target class.
+     *
      * @return the type of targets returned by this {@link com.hb.springframework.aop.TargetSource}
      */
-    public Class<?>[] getTargetClass(){
+    public Class<?>[] getTargetClass() {
         return this.target.getClass().getInterfaces();
     }
 
     /**
      * Return a target instance. Invoked immediately before the
      * AOP framework calls the "target" of an AOP method invocation.
+     *
      * @return the target object, which contains the joinpoint
      * @throws Exception if the target object can't be resolved
      */
-    public Object getTarget(){
+    public Object getTarget() {
         return this.target;
     }
-    
+
 }

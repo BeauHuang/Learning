@@ -8,8 +8,7 @@ package com.hb.Chapter01.Policy.duck;
  * @Date 2023/4/11 23:04
  * @Version 1.0
  */
-public class WhiteDuck extends Duck{
-
+public class WhiteDuck extends Duck {
 
 
     @Override

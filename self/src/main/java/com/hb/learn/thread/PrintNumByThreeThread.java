@@ -21,10 +21,10 @@ public class PrintNumByThreeThread {
         new PrintNumByThreeThread().printNum01();
         //new PrintNumByThreeThread().printNum02();
         long t2 = System.currentTimeMillis();
-        System.out.println("耗时"+(t2-t1)+"毫秒");
+        System.out.println("耗时" + (t2 - t1) + "毫秒");
     }
 
-    public void printNum01(){
+    public void printNum01() {
         Thread t1 = new Thread(() -> {
             while (count < num) {
                 synchronized (obj1) {
@@ -77,7 +77,8 @@ public class PrintNumByThreeThread {
         }
 
     }
-    public void printNum02(){
+
+    public void printNum02() {
         for (int i = 0; i < num; i++) {
             System.out.println(Thread.currentThread().getName() + count++);
         }

@@ -15,7 +15,7 @@ import org.junit.Test;
 public class Test02 {
 
     @Test
-    public void test01(){
+    public void test01() {
         List<Integer> res1 = Arrays.asList(1, 2, 3);
         List<Integer> res2 = new ArrayList<>(res1);
 

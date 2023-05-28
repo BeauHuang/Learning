@@ -19,10 +19,10 @@ import com.hb.Chapter03.Decorator.coffee.Espresso;
 public class DecoratorTest {
 
     @Test
-    public void test01(){
+    public void test01() {
         Beverage beverage01 = new Espresso();
 
-        System.out.println(beverage01.getDescription()+", $"+beverage01.cost());
+        System.out.println(beverage01.getDescription() + ", $" + beverage01.cost());
 
         Beverage beverage02 = new Espresso();
 
@@ -30,7 +30,7 @@ public class DecoratorTest {
         beverage02 = new Doy(beverage02);
         beverage02 = new Whip(beverage02);
 
-        System.out.println(beverage02.getDescription()+", $"+beverage02.cost());
+        System.out.println(beverage02.getDescription() + ", $" + beverage02.cost());
 
         Beverage beverage03 = new Espresso();
 
@@ -39,7 +39,7 @@ public class DecoratorTest {
         beverage03 = new Doy(beverage03);
         beverage03 = new Whip(beverage03);
 
-        System.out.println(beverage03.getDescription()+", $"+beverage03.cost());
+        System.out.println(beverage03.getDescription() + ", $" + beverage03.cost());
 
 
     }

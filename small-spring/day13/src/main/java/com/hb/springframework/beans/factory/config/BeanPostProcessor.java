@@ -14,14 +14,14 @@ import com.hb.springframework.beans.BeansException;
 /**
  * Factory hook that allows for custom modification of new bean instances,
  * e.g. checking for marker interfaces or wrapping them with proxies.
- *
+ * <p>
  * 用于修改新实例化 Bean 对象的扩展点
- *
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public interface BeanPostProcessor {

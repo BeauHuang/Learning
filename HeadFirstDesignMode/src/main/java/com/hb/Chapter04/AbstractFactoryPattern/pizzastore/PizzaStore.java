@@ -13,7 +13,7 @@ import com.hb.Chapter04.AbstractFactoryPattern.pizza.Pizza;
  */
 public abstract class PizzaStore {
 
-    public Pizza orderPizza(String type){
+    public Pizza orderPizza(String type) {
 
         Pizza pizza = createPizza(type);
 

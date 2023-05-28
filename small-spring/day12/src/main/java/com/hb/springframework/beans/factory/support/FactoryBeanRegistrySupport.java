@@ -11,11 +11,11 @@ import com.hb.springframework.beans.factory.FactoryBean;
  * {@link cn.bugstack.springframework.beans.factory.FactoryBean} instances,
  * integrated with {@link DefaultSingletonBeanRegistry}'s singleton management.
  * <p>
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanRegistry {
@@ -38,15 +38,17 @@ public abstract class FactoryBeanRegistrySupport extends DefaultSingletonBeanReg
                 this.factoryBeanObjectCache.put(beanName, (object != null ? object : NULL_OBJECT));
             }
             return (object != NULL_OBJECT ? object : null);
-        } else {
+        }
+        else {
             return doGetObjectFromFactoryBean(factory, beanName);
         }
     }
 
-    private Object doGetObjectFromFactoryBean(final FactoryBean factory, final String beanName){
+    private Object doGetObjectFromFactoryBean(final FactoryBean factory, final String beanName) {
         try {
             return factory.getObject();
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             throw new BeansException("FactoryBean threw exception on object[" + beanName + "] creation", e);
         }
     }

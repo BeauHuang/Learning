@@ -7,14 +7,14 @@ package com.hb.springframework.beans.factory;
  * determined by individual subinterfaces, but should typically
  * consist of just one void-returning method that accepts a single
  * argument.
- *
+ * <p>
  * 标记类接口，实现该接口可以被Spring容器感知
- *
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public interface Aware {

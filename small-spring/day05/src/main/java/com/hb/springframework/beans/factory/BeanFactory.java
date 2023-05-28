@@ -14,13 +14,14 @@ import com.hb.springframework.beans.BeansException;
 /**
  * Bean工厂最基础的接口，定义了一些方法规范
  * <p>
- *     1.getBean
+ * 1.getBean
  * </p>
  */
 public interface BeanFactory {
 
     /**
      * 根据bean的name获取bean
+     *
      * @param name
      * @return
      * @throws BeansException
@@ -29,6 +30,7 @@ public interface BeanFactory {
 
     /**
      * 根据bean的name获取含参构造函数的bean
+     *
      * @param name
      * @param args
      * @return
@@ -38,10 +40,11 @@ public interface BeanFactory {
 
     /**
      * 根据bean的name和指定的类型获取相应的bean
+     *
      * @param name
      * @param requiredType
-     * @return
      * @param <T>
+     * @return
      * @throws BeansException
      */
     <T> T getBean(String name, Class<T> requiredType) throws BeansException;

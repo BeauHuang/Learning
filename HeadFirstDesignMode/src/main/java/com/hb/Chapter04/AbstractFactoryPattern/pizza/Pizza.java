@@ -22,7 +22,6 @@ import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Veggies.Veggies;
 public abstract class Pizza {
 
 
-
     public String name;
     public Dough dough;
     public Sauce sauce;
@@ -35,22 +34,23 @@ public abstract class Pizza {
 
     public abstract void prepare();
 
-    public void bake(){
+    public void bake() {
         System.out.println("烘烤中。。。");
     }
 
-    public void cut(){
+    public void cut() {
         System.out.println("切片中。。。");
     }
 
-    public void box(){
+    public void box() {
         System.out.println("包装中。。。");
     }
 
     public void setName(String name) {
         this.name = name;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
 

@@ -19,11 +19,11 @@ import com.hb.springframework.utils.ClassUtils;
  * <p>
  * 处理 @Value、@Autowired，注解的 BeanPostProcessor
  * <p>
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public class AutowiredAnnotationBeanPostProcessor implements InstantiationAwareBeanPostProcessor, BeanFactoryAware {
@@ -63,7 +63,8 @@ public class AutowiredAnnotationBeanPostProcessor implements InstantiationAwareB
                 if (null != qualifierAnnotation) {
                     dependentBeanName = qualifierAnnotation.value();
                     dependentBean = beanFactory.getBean(dependentBeanName, fieldType);
-                } else {
+                }
+                else {
                     dependentBean = beanFactory.getBean(fieldType);
                 }
                 BeanUtil.setFieldValue(bean, field.getName(), dependentBean);

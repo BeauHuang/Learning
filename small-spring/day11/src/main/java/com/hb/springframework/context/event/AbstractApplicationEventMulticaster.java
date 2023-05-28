@@ -19,11 +19,11 @@ import com.hb.springframework.utils.ClassUtils;
  * Abstract implementation of the {@link ApplicationEventMulticaster} interface,
  * providing the basic listener registration facility.
  * <p>
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public abstract class AbstractApplicationEventMulticaster implements ApplicationEventMulticaster, BeanFactoryAware {
@@ -50,15 +50,18 @@ public abstract class AbstractApplicationEventMulticaster implements Application
     /**
      * Return a Collection of ApplicationListeners matching the given
      * event type. Non-matching listeners get excluded early.
+     *
      * @param event the event to be propagated. Allows for excluding
-     * non-matching listeners early, based on cached matching information.
+     *              non-matching listeners early, based on cached matching information.
      * @return a Collection of ApplicationListeners
      * @see cn.bugstack.springframework.context.ApplicationListener
      */
     protected Collection<ApplicationListener> getApplicationListeners(ApplicationEvent event) {
         LinkedList<ApplicationListener> allListeners = new LinkedList<ApplicationListener>();
         for (ApplicationListener<ApplicationEvent> listener : applicationListeners) {
-            if (supportsEvent(listener, event)) allListeners.add(listener);
+            if (supportsEvent(listener, event)) {
+                allListeners.add(listener);
+            }
         }
         return allListeners;
     }
@@ -78,7 +81,8 @@ public abstract class AbstractApplicationEventMulticaster implements Application
         Class<?> eventClassName;
         try {
             eventClassName = Class.forName(className);
-        } catch (ClassNotFoundException e) {
+        }
+        catch (ClassNotFoundException e) {
             throw new BeansException("wrong event class name: " + className);
         }
         // 判定此 eventClassName 对象所表示的类或接口与指定的 event.getClass() 参数所表示的类或接口是否相同，或是否是其超类或超接口。

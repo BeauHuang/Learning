@@ -21,11 +21,13 @@ public class StaticProxy {
 
 }
 
-interface Person{
+interface Person {
     void wakeup();
+
     void sleep();
 }
- class Student implements Person{
+
+class Student implements Person {
 
     private String name;
 
@@ -38,16 +40,16 @@ interface Person{
 
     @Override
     public void wakeup() {
-        System.out.println("学生<"+name+">早晨醒来啦");
+        System.out.println("学生<" + name + ">早晨醒来啦");
     }
 
     @Override
     public void sleep() {
-        System.out.println("学生<"+name+">晚上睡觉啦");
+        System.out.println("学生<" + name + ">晚上睡觉啦");
     }
 }
 
- class PersonProxy implements Person {
+class PersonProxy implements Person {
 
     private Person person;
 

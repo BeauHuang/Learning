@@ -2,21 +2,21 @@ package com.hb.springframework.context.annotation;
 
 import java.util.Set;
 
+import cn.hutool.core.util.StrUtil;
 import com.hb.springframework.beans.factory.config.BeanDefinition;
 import com.hb.springframework.beans.factory.support.BeanDefinitionRegistry;
 import com.hb.springframework.stereotype.Component;
-import cn.hutool.core.util.StrUtil;
 
 /**
  * A bean definition scanner that detects bean candidates on the classpath,
  * registering corresponding bean definitions with a given registry ({@code BeanFactory}
  * or {@code ApplicationContext}).
  * <p>
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateComponentProvider {

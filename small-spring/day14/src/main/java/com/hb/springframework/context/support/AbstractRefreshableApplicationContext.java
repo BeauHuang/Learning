@@ -12,7 +12,7 @@ import com.hb.springframework.beans.factory.support.DefaultListableBeanFactory;
  * @Date 2023/4/8 21:55
  * @Version 1.0
  */
-public abstract class AbstractRefreshableApplicationContext extends AbstractApplicationContext{
+public abstract class AbstractRefreshableApplicationContext extends AbstractApplicationContext {
     private DefaultListableBeanFactory beanFactory;
 
     @Override

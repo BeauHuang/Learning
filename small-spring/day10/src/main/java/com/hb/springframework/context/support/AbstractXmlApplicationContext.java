@@ -11,12 +11,12 @@ import com.hb.springframework.beans.factory.xml.XmlBeanDefinitionReader;
  * @Date 2023/4/8 21:58
  * @Version 1.0
  */
-public abstract class AbstractXmlApplicationContext  extends AbstractRefreshableApplicationContext {
+public abstract class AbstractXmlApplicationContext extends AbstractRefreshableApplicationContext {
     @Override
     protected void loadBeanDefinitions(DefaultListableBeanFactory beanFactory) {
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory, this);
         String[] configLocations = getConfigLocations();
-        if (null != configLocations){
+        if (null != configLocations) {
             beanDefinitionReader.loadBeanDefinitions(configLocations);
         }
     }

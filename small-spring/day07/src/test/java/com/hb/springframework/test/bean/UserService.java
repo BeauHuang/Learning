@@ -6,7 +6,7 @@ import com.hb.springframework.beans.factory.InitializingBean;
 /**
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
-public class UserService  implements InitializingBean, DisposableBean {
+public class UserService implements InitializingBean, DisposableBean {
 
     private String uId;
     private String company;

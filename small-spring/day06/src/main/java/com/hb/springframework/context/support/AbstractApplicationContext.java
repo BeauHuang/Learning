@@ -17,7 +17,7 @@ import com.hb.springframework.core.io.DefaultResourceLoader;
  * @Date 2023/4/8 21:47
  * @Version 1.0
  */
-public abstract class AbstractApplicationContext  extends DefaultResourceLoader implements ConfigurableApplicationContext {
+public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext {
 
     @Override
     public void refresh() throws BeansException {

@@ -1,7 +1,7 @@
 package com.hb.springframework.beans.factory.support;
 
-import com.hb.springframework.beans.factory.BeanFactory;
 import com.hb.springframework.beans.BeansException;
+import com.hb.springframework.beans.factory.BeanFactory;
 import com.hb.springframework.beans.factory.config.BeanDefinition;
 
 /**
@@ -19,6 +19,7 @@ import com.hb.springframework.beans.factory.config.BeanDefinition;
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory implements BeanFactory {
     /**
      * 通过bean的name获取bean
+     *
      * @param name
      * @return
      * @throws BeansException
@@ -30,6 +31,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
 
     /**
      * 获取带参构造函数的bean
+     *
      * @param name
      * @param args
      * @return
@@ -42,10 +44,11 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
 
     /**
      * 获取指定类型的bean
+     *
      * @param name
      * @param requiredType
-     * @return
      * @param <T>
+     * @return
      * @throws BeansException
      */
     @Override
@@ -55,7 +58,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
 
     /**
      * 调用父类DefaultSingletonBeanRegistory的getSingletonBean从单例容器中获取bean，获取不到则创建
-     *
+     * <p>
      * 在此处，获取bean的方法由其父类DefaultSingletonBeanRegistory实现
      * 而创建bean的方法只在本抽象类中定义，具体实现由其实现类AbstractAutowireCapableBeanFactory实现
      * 这样，就做到了职责分离
@@ -80,6 +83,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
 
     /**
      * 通过name获取BeanDefinition，也由其子类实现
+     *
      * @param name
      * @return
      * @throws BeansException

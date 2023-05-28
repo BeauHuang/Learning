@@ -24,11 +24,12 @@ import com.hb.springframework.core.io.DefaultResourceLoader;
  * @Date 2023/4/8 21:47
  * @Version 1.0
  */
-public abstract class AbstractApplicationContext  extends DefaultResourceLoader implements ConfigurableApplicationContext {
+public abstract class AbstractApplicationContext extends DefaultResourceLoader implements ConfigurableApplicationContext {
 
     public static final String APPLICATION_EVENT_MULTICASTER_BEAN_NAME = "applicationEventMulticaster";
 
     private ApplicationEventMulticaster applicationEventMulticaster;
+
     @Override
     public void refresh() throws BeansException {
         // 1. 创建 BeanFactory，并加载 BeanDefinition

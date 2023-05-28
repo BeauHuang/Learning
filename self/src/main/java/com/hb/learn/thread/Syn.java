@@ -8,7 +8,7 @@ package com.hb.learn.thread;
  * @Date 2022/12/15 23:09
  * @Version 1.0
  */
-public class Syn implements Runnable{
+public class Syn implements Runnable {
     static int a = 0;
     static Syn t = new Syn();
 

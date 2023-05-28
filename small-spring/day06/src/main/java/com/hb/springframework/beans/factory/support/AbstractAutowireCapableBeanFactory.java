@@ -26,6 +26,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
      * 创建完bean后，填充属性
      * 再将bean注册到单例工厂的容器中
      * 最后返回bean
+     *
      * @param name
      * @param def
      * @param args
@@ -72,6 +73,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
     /**
      * 填充属性
+     *
      * @param beanName--记录日志，无其他作用
      * @param bean--已经创建好的bean
      * @param def--通过BeanDefinition除了拿到类对象，还能拿到属性信息
@@ -100,6 +102,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
     /**
      * 获取实例化对象的工具
+     *
      * @return
      */
     public InstantiationStrategy getInstantiationStrategy() {
@@ -109,6 +112,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     /**
      * 设置实例化对象的工具，目前本类中是写死的
      * 后续可以考虑放在其他地方设置
+     *
      * @param instantiationStrategy
      */
     public void setInstantiationStrategy(InstantiationStrategy instantiationStrategy) {

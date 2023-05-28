@@ -15,21 +15,21 @@ interface Car {
     void run();
 }
 
- class Audi implements Car {
+class Audi implements Car {
     @Override
     public void run() {
         System.out.println("Audi is running...");
     }
 }
 
- class BMW implements Car {
+class BMW implements Car {
     @Override
     public void run() {
         System.out.println("BMW is running...");
     }
 }
 
- interface CarFactory {
+interface CarFactory {
     Car createCar();
 }
 
@@ -47,7 +47,7 @@ class BMWFactory implements CarFactory {
     }
 }
 
- class Test {
+class Test {
     public static void main(String[] args) {
         CarFactory audiFactory = new AudiFactory();
         CarFactory bmwFactory = new BMWFactory();

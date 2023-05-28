@@ -33,6 +33,7 @@ public class DefaultSingletonBeanRegistory implements SingletonBeanRegistry {
 
     /**
      * 实现的接口方法，通过bean的name从容器中获取单例bean
+     *
      * @param name
      * @return
      * @throws BeansException
@@ -44,6 +45,7 @@ public class DefaultSingletonBeanRegistory implements SingletonBeanRegistry {
 
     /**
      * 注册单例Bean,在继承了DefaultSingletonBeanRegistory的子类中直接使用方法名就可以调用
+     *
      * @param name
      * @param bean
      */
@@ -64,7 +66,8 @@ public class DefaultSingletonBeanRegistory implements SingletonBeanRegistry {
             DisposableBean disposableBean = disposableBeans.remove(beanName);
             try {
                 disposableBean.destroy();
-            } catch (Exception e) {
+            }
+            catch (Exception e) {
                 throw new BeansException("Destroy method on bean with name '" + beanName + "' threw an exception", e);
             }
         }

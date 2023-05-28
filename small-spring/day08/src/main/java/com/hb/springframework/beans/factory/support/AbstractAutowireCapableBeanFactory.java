@@ -27,7 +27,7 @@ import com.hb.springframework.beans.factory.config.BeanReference;
  * @Date 2023/3/30 23:15
  * @Version 1.0
  */
-public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory  implements AutowireCapableBeanFactory {
+public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory implements AutowireCapableBeanFactory {
     private InstantiationStrategy instantiationStrategy = new CglibsubclassingInstantiationStrategy();
 
     /**
@@ -36,6 +36,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
      * 创建完bean后，填充属性
      * 再将bean注册到单例工厂的容器中
      * 最后返回bean
+     *
      * @param name
      * @param def
      * @param args
@@ -92,6 +93,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
     /**
      * 填充属性
+     *
      * @param beanName--记录日志，无其他作用
      * @param bean--已经创建好的bean
      * @param def--通过BeanDefinition除了拿到类对象，还能拿到属性信息
@@ -120,6 +122,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
     /**
      * 获取实例化对象的工具
+     *
      * @return
      */
     public InstantiationStrategy getInstantiationStrategy() {
@@ -129,6 +132,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     /**
      * 设置实例化对象的工具，目前本类中是写死的
      * 后续可以考虑放在其他地方设置
+     *
      * @param instantiationStrategy
      */
     public void setInstantiationStrategy(InstantiationStrategy instantiationStrategy) {
@@ -142,7 +146,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
             if (bean instanceof BeanFactoryAware) {
                 ((BeanFactoryAware) bean).setBeanFactory(this);
             }
-            if (bean instanceof BeanClassLoaderAware){
+            if (bean instanceof BeanClassLoaderAware) {
                 ((BeanClassLoaderAware) bean).setBeanClassLoader(getBeanClassLoader());
             }
             if (bean instanceof BeanNameAware) {
@@ -156,7 +160,8 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         // 执行 Bean 对象的初始化方法
         try {
             invokeInitMethods(beanName, wrappedBean, beanDefinition);
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             throw new BeansException("Invocation of init method of bean[" + beanName + "] failed", e);
         }
 
@@ -187,7 +192,9 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         Object result = existingBean;
         for (BeanPostProcessor processor : getBeanPostProcessors()) {
             Object current = processor.postProcessBeforeInitialization(result, beanName);
-            if (null == current) return result;
+            if (null == current) {
+                return result;
+            }
             result = current;
         }
         return result;
@@ -198,7 +205,9 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         Object result = existingBean;
         for (BeanPostProcessor processor : getBeanPostProcessors()) {
             Object current = processor.postProcessAfterInitialization(result, beanName);
-            if (null == current) return result;
+            if (null == current) {
+                return result;
+            }
             result = current;
         }
         return result;

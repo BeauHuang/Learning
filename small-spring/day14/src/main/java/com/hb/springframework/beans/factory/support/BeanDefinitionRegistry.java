@@ -19,6 +19,7 @@ public interface BeanDefinitionRegistry {
 
     /**
      * 注册BeanDefinition
+     *
      * @param name
      * @param def
      * @throws BeansException
@@ -36,6 +37,7 @@ public interface BeanDefinitionRegistry {
 
     /**
      * 判断是否包含指定名称的BeanDefinition
+     *
      * @param beanName
      * @return
      */
@@ -43,7 +45,7 @@ public interface BeanDefinitionRegistry {
 
     /**
      * Return the names of all beans defined in this registry.
-     *
+     * <p>
      * 返回注册表中所有的Bean名称
      */
     String[] getBeanDefinitionNames();

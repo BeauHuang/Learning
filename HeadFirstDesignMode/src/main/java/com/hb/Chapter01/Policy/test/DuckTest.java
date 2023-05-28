@@ -18,7 +18,7 @@ import com.hb.Chapter01.Policy.duck.behavior.impl.Quack;
 public class DuckTest {
 
     @Test
-    public void testDUck(){
+    public void testDUck() {
         Duck duck = new WhiteDuck();
         duck.setFlyBehavior(new FlyWithWings());
         duck.setQuackbehavior(new Quack());

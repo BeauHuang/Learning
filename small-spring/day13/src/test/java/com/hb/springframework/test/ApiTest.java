@@ -31,7 +31,7 @@ public class ApiTest {
     }
 
     @Test
-    public void test_beanPost(){
+    public void test_beanPost() {
 
         BeanPostProcessor beanPostProcessor = new BeanPostProcessor() {
             @Override

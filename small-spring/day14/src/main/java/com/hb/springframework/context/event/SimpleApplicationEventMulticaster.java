@@ -8,11 +8,11 @@ import com.hb.springframework.context.ApplicationListener;
 /**
  * Simple implementation of the {@link ApplicationEventMulticaster} interface.
  * <p>
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public class SimpleApplicationEventMulticaster extends AbstractApplicationEventMulticaster {

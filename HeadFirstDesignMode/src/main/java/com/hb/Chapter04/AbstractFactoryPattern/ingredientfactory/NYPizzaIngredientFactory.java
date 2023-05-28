@@ -21,7 +21,7 @@ import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Veggies.Veggies;
  * @Date 2023/4/21 23:48
  * @Version 1.0
  */
-public class NYPizzaIngredientFactory implements PizzaIngredientFactory{
+public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
     @Override
     public Dough createDaugh() {
         return new ThinCrustDough();

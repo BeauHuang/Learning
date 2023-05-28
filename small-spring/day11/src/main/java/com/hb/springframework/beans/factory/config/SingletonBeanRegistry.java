@@ -17,6 +17,7 @@ import com.hb.springframework.beans.BeansException;
 public interface SingletonBeanRegistry {
     /**
      * 通过bean的name获取单例对象
+     *
      * @param name
      * @return
      * @throws BeansException

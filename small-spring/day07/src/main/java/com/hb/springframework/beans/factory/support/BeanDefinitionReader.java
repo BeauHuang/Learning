@@ -22,6 +22,7 @@ public interface BeanDefinitionReader {
      * 获取注册信息的方法，返回的是BeanDefinitionRegistry类型的对象
      * 通过BeanDefinitionRegistry类型的对象（子类或实现类）就能够注册BeanDefinition,以及获取BeanDefinition的详情
      * 拿到BeanDefinition的详情，就能拿到bean的class信息和属性信息
+     *
      * @return
      */
     BeanDefinitionRegistry getRegistry();
@@ -30,12 +31,12 @@ public interface BeanDefinitionReader {
      * 获取资源加载器，返回ResourceLoader类型的对象
      * 拿到ResourceLoader对象后，就能拿到getResource()获取Resource对象
      * 拿到Resource对象后，就能通过getInputStream()获取到字节流了
+     *
      * @return
      */
     ResourceLoader getResourceLoader();
 
     /**
-     *
      * @param resource
      * @throws BeansException
      */

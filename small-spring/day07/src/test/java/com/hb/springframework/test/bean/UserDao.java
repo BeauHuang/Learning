@@ -13,7 +13,7 @@ public class UserDao {
         hashMap.put("10003", "阿毛");
     }
 
-    public void destroyDataMethod(){
+    public void destroyDataMethod() {
         System.out.println("执行：destroy-method");
         hashMap.clear();
     }

@@ -8,7 +8,7 @@ package com.hb.Chapter03.Decorator.coffee;
  * @Date 2023/4/14 22:35
  * @Version 1.0
  */
-public class Espresso extends Beverage{
+public class Espresso extends Beverage {
 
     public Espresso() {
         description = "Espresso";

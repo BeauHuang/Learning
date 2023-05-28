@@ -20,7 +20,7 @@ import com.hb.springframework.test.common.MyBeanPostProcessor;
 public class ApiTest {
 
     @Test
-    public void test_BeanFactoryPostProcessorAndBeanPostProcessor(){
+    public void test_BeanFactoryPostProcessorAndBeanPostProcessor() {
         // 1.初始化 BeanFactory
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 

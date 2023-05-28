@@ -2,15 +2,15 @@ package com.hb.springframework.context.event;
 
 /**
  * Event raised when an <code>ApplicationContext</code> gets closed.
- *
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
-public class ContextClosedEvent extends ApplicationContextEvent{
+public class ContextClosedEvent extends ApplicationContextEvent {
 
     /**
      * Constructs a prototypical Event.

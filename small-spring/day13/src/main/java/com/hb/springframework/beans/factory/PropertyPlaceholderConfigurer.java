@@ -2,6 +2,7 @@ package com.hb.springframework.beans.factory;
 
 import java.io.IOException;
 import java.util.Properties;
+
 import com.hb.springframework.beans.BeansException;
 import com.hb.springframework.beans.PropertyValue;
 import com.hb.springframework.beans.PropertyValues;
@@ -15,11 +16,11 @@ import com.hb.springframework.core.io.Resource;
  * i.e. a properties file. Useful for custom config files targeted at system
  * administrators that override bean properties configured in the application context.
  * <p>
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public class PropertyPlaceholderConfigurer implements BeanFactoryPostProcessor {
@@ -52,7 +53,9 @@ public class PropertyPlaceholderConfigurer implements BeanFactoryPostProcessor {
                 PropertyValues propertyValues = beanDefinition.getPropertyValues();
                 for (PropertyValue propertyValue : propertyValues.getPropertyValues()) {
                     Object value = propertyValue.getValue();
-                    if (!(value instanceof String)) continue;
+                    if (!(value instanceof String)) {
+                        continue;
+                    }
                     String strVal = (String) value;
                     StringBuilder buffer = new StringBuilder(strVal);
                     int startIdx = strVal.indexOf(DEFAULT_PLACEHOLDER_PREFIX);
@@ -65,7 +68,8 @@ public class PropertyPlaceholderConfigurer implements BeanFactoryPostProcessor {
                     }
                 }
             }
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             throw new BeansException("Could not load properties", e);
         }
     }

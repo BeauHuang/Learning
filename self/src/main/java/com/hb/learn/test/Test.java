@@ -3,6 +3,7 @@ package com.hb.learn.test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
 /**
  * @ClassName Test
  * @Description TODO
@@ -14,15 +15,14 @@ import java.util.stream.Collectors;
 public class Test {
 
 
-
 }
 
 
-class Test01{
+class Test01 {
     public static void main(String[] args) {
-        while (true){
-            new Thread(()->{
-                System.out.println(Thread.currentThread().getName()+"==自然选择，前进四！");
+        while (true) {
+            new Thread(() -> {
+                System.out.println(Thread.currentThread().getName() + "==自然选择，前进四！");
             }).start();
         }
     }
@@ -47,16 +47,14 @@ class FunctionalProgrammingExample {
         }
         long l2 = System.currentTimeMillis();
         //System.out.println("Squared numbers (Imperative): " + squaredNumbersImperative);
-        System.out.println(l2-l1);
+        System.out.println(l2 - l1);
 
         // 函数式编程方式
         long l3 = System.currentTimeMillis();
-        List<Integer> squaredNumbersFunctional = numbers.stream()
-                .map(number -> number * number)
-                .collect(Collectors.toList());
+        List<Integer> squaredNumbersFunctional = numbers.stream().map(number -> number * number).collect(Collectors.toList());
         long l4 = System.currentTimeMillis();
         //System.out.println("Squared numbers (Functional): " + squaredNumbersFunctional);
-        System.out.println(l4-l3);
+        System.out.println(l4 - l3);
 
     }
 }

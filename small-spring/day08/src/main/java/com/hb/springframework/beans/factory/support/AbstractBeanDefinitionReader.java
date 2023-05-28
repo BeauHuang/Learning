@@ -11,7 +11,7 @@ import com.hb.springframework.core.io.ResourceLoader;
  * @Date 2023/4/4 22:59
  * @Version 1.0
  */
-public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader{
+public abstract class AbstractBeanDefinitionReader implements BeanDefinitionReader {
 
     private final BeanDefinitionRegistry registry;
 

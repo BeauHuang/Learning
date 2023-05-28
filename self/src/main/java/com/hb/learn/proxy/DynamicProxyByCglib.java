@@ -23,11 +23,13 @@ public class DynamicProxyByCglib {
     }
 }
 
-interface Person3{
+interface Person3 {
     void wakeup();
+
     void sleep();
 }
-class Student3 implements Person3{
+
+class Student3 implements Person3 {
 
     private String name;
 
@@ -40,12 +42,12 @@ class Student3 implements Person3{
 
     @Override
     public void wakeup() {
-        System.out.println("学生<"+name+">早晨醒来啦");
+        System.out.println("学生<" + name + ">早晨醒来啦");
     }
 
     @Override
     public void sleep() {
-        System.out.println("学生<"+name+">晚上睡觉啦");
+        System.out.println("学生<" + name + ">晚上睡觉啦");
     }
 }
 
@@ -59,7 +61,7 @@ class CglibProxy implements MethodInterceptor {
         this.bean = bean;
     }
 
-    public Object getProxy(){
+    public Object getProxy() {
         //设置需要创建子类的类
         enhancer.setSuperclass(bean.getClass());
         enhancer.setCallback(this);
@@ -71,14 +73,15 @@ class CglibProxy implements MethodInterceptor {
     @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
         String methodName = method.getName();
-        if (methodName.equals("wakeup")){
+        if (methodName.equals("wakeup")) {
             System.out.println("早安~~~");
-        }else if(methodName.equals("sleep")){
+        }
+        else if (methodName.equals("sleep")) {
             System.out.println("晚安~~~");
         }
 
         //调用原bean的方法
-        return method.invoke(bean,args);
+        return method.invoke(bean, args);
     }
 
 }

@@ -22,12 +22,18 @@ import com.hb.springframework.utils.ClassUtils;
  * 抽象bean工厂
  */
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory implements ConfigurableBeanFactory {
-    /** ClassLoader to resolve bean class names with, if necessary */
+    /**
+     * ClassLoader to resolve bean class names with, if necessary
+     */
     private ClassLoader beanClassLoader = ClassUtils.getDefaultClassLoader();
-    /** BeanPostProcessors to apply in createBean */
+    /**
+     * BeanPostProcessors to apply in createBean
+     */
     private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<BeanPostProcessor>();
+
     /**
      * 通过bean的name获取bean
+     *
      * @param name
      * @return
      * @throws BeansException
@@ -39,6 +45,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
 
     /**
      * 获取带参构造函数的bean
+     *
      * @param name
      * @param args
      * @return
@@ -51,10 +58,11 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
 
     /**
      * 获取指定类型的bean
+     *
      * @param name
      * @param requiredType
-     * @return
      * @param <T>
+     * @return
      * @throws BeansException
      */
     @Override
@@ -64,7 +72,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
 
     /**
      * 调用父类DefaultSingletonBeanRegistory的getSingletonBean从单例容器中获取bean，获取不到则创建
-     *
+     * <p>
      * 在此处，获取bean的方法由其父类DefaultSingletonBeanRegistory实现
      * 而创建bean的方法只在本抽象类中定义，具体实现由其实现类AbstractAutowireCapableBeanFactory实现
      * 这样，就做到了职责分离
@@ -89,6 +97,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
 
     /**
      * 通过name获取BeanDefinition，也由其子类实现
+     *
      * @param name
      * @return
      * @throws BeansException
@@ -96,7 +105,7 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistory 
     protected abstract BeanDefinition getBeanDefinition(String name) throws BeansException;
 
     @Override
-    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor){
+    public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor) {
         this.beanPostProcessors.remove(beanPostProcessor);
         this.beanPostProcessors.add(beanPostProcessor);
     }

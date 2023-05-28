@@ -6,12 +6,12 @@ import com.hb.springframework.context.ApplicationEvent;
 
 /**
  * Base class for events raised for an <code>ApplicationContext</code>.
- *
- *
- *
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * <p>
  * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
  */
 public class ApplicationContextEvent extends ApplicationEvent {

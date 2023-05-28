@@ -10,7 +10,7 @@ import com.hb.Chapter03.Decorator.coffee.Beverage;
  * @Date 2023/4/14 22:41
  * @Version 1.0
  */
-public class Whip extends CondimentDecorator{
+public class Whip extends CondimentDecorator {
     public Whip(Beverage beverage) {
 
         this.beverage = beverage;
@@ -18,11 +18,11 @@ public class Whip extends CondimentDecorator{
 
     @Override
     public String getDescription() {
-        return beverage.getDescription()+", Whip";
+        return beverage.getDescription() + ", Whip";
     }
 
     @Override
     public double cost() {
-        return beverage.cost()+0.4;
+        return beverage.cost() + 0.4;
     }
 }
