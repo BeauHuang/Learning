@@ -1,6 +1,7 @@
 package com.hb.Chapter04.simplefactory;
 
-import com.hb.Chapter04.FactoryPattern.product.Pizza;
+
+import com.hb.Chapter04.simplefactory.pizza.Pizza;
 
 /**
  * @ClassName PizzaStore
@@ -11,7 +12,7 @@ import com.hb.Chapter04.FactoryPattern.product.Pizza;
  * @Version 1.0
  */
 public class PizzaStore {
-
+    public String name;
     SimpleFactory simpleFactory;
 
     public PizzaStore(SimpleFactory simpleFactory) {
