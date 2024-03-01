@@ -1,4 +1,4 @@
-package com.hb.Chapter04.FactoryPattern.product;
+package com.hb.Chapter04.simplefactory.pizza;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,6 @@ import java.util.List;
 public abstract class Pizza {
 
     public String name;
-    public String dough;
-    public String sause;
     public List<String> toppings = new ArrayList<>();
 
     public void prepare() {
@@ -36,7 +34,6 @@ public abstract class Pizza {
     public void box() {
         System.out.println("包装中。。。");
     }
-
     public String getName() {
         return name;
     }

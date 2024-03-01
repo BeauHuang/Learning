@@ -1,6 +1,7 @@
-package com.hb.Chapter04.simplefactory;
+package com.hb.Chapter04.simplefactory.store;
 
 
+import com.hb.Chapter04.simplefactory.factory.SimpleFactory;
 import com.hb.Chapter04.simplefactory.pizza.Pizza;
 
 /**
@@ -12,6 +13,7 @@ import com.hb.Chapter04.simplefactory.pizza.Pizza;
  * @Version 1.0
  */
 public class PizzaStore {
+
     public String name;
     SimpleFactory simpleFactory;
 
@@ -27,5 +29,6 @@ public class PizzaStore {
         pizza.box();
         return pizza;
     }
+
 
 }

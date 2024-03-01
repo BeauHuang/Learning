@@ -1,4 +1,4 @@
-package com.hb.Chapter04.simplefactory;
+package com.hb.Chapter04.simplefactory.factory;
 
 import com.hb.Chapter04.simplefactory.pizza.CheesePizza;
 import com.hb.Chapter04.simplefactory.pizza.Pizza;

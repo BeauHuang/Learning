@@ -21,7 +21,6 @@ import com.hb.Chapter04.AbstractFactoryPattern.ingredient.Veggies.Veggies;
  */
 public abstract class Pizza {
 
-
     public String name;
     public Dough dough;
     public Sauce sauce;
